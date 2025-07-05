@@ -704,10 +704,7 @@ local function showSubTooltip(cell, item)
 				hasPrice = true
 				tooltip2AddDoubleLine(
 					colorize(lineInfo.localisedDisplayText, blue),
-					lineInfo.isMonetaryValue and formattedPrice,
-					nil,
-					nil
-				)
+					lineInfo.isMonetaryValue and formattedPrice)
 			end
 		end
 
