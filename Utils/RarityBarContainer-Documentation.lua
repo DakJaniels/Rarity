@@ -1,3 +1,4 @@
+---@diagnostic disable: missing-return
 ---@meta RarityBarContainer
 
 ---World of Warcraft addon library for creating and managing progress bars and bar groups
