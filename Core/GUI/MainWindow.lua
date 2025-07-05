@@ -231,7 +231,6 @@ local function onClickItem(cell, item)
 		if trackedItem ~= item and Rarity.Session:IsActive() then
 			Rarity.Session:End()
 		end
-		Rarity.Tracking:SetTrackedItem(nil, 2)
 		Rarity.Tracking:Update(item)
 	end
 end
