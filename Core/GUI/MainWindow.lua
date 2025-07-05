@@ -762,13 +762,13 @@ local function showSubTooltip(cell, item)
 	tooltip2:Show()
 end
 
-local function showSubTooltipMe(cell, group)
-	showSubTooltip(cell, group, "")
-end
+-- local function showSubTooltipMe(cell, group)
+-- 	showSubTooltip(cell, group, "")
+-- end
 
-local function showSubTooltipPet(cell, group)
-	showSubTooltip(cell, group, "_pet")
-end
+-- local function showSubTooltipPet(cell, group)
+-- 	showSubTooltip(cell, group, "_pet")
+-- end
 
 local function onClickGroup(cell, group)
 	if type(group) == "table" then
