@@ -96,6 +96,9 @@ function GUI:UpdateBar()
 	else
 		self.barGroup:Lock()
 	end
+
+	-- Set the maximum number of bars to display based on maxElements setting
+	self.barGroup:SetMaxBars(self.db.profile.bar.maxElements or 10)
 end
 
 function GUI:ToggleProgressBar()
