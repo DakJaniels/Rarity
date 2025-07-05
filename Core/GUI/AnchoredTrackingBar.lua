@@ -38,6 +38,10 @@ function GUI:UpdateBar()
 	if not self.barGroup:GetBars() then
 		return
 	end
+	if not self.db.profile.bar.enabled then
+		self.barGroup:Hide()
+		return
+	end
 	if not self.db.profile.bar.font then
 		self.barGroup:SetFont(self.db.profile.bar.font, self.db.profile.bar.fontSize or 8)
 	else

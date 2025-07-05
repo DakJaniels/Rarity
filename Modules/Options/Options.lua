@@ -998,10 +998,27 @@ function R:PrepareOptions()
 						order = newOrder(),
 						inline = true,
 						args = {
+							enabled = {
+								type = "toggle",
+								order = newOrder(),
+								name = L["Enable Progress Bar"],
+								desc = L["Disables the progress bar and all related options. You must re-enable to access these settings."],
+								get = function()
+									return self.db.profile.bar.enabled
+								end,
+								set = function(_, val)
+									self.db.profile.bar.enabled = val
+									Rarity.GUI:UpdateBar()
+									Rarity.GUI:UpdateText()
+								end,
+							},
 							anchor = {
 								type = "toggle",
 								order = newOrder(),
 								name = L["Show anchor"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								get = function()
 									return self.db.profile.bar.anchor
 								end,
@@ -1015,6 +1032,9 @@ function R:PrepareOptions()
 								type = "toggle",
 								order = newOrder(),
 								name = L["Locked"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								get = function()
 									return self.db.profile.bar.locked
 								end,
@@ -1028,6 +1048,9 @@ function R:PrepareOptions()
 								type = "toggle",
 								order = newOrder(),
 								name = L["Grow Up"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								get = function()
 									return self.db.profile.bar.growUp
 								end,
@@ -1041,6 +1064,9 @@ function R:PrepareOptions()
 								type = "toggle",
 								order = newOrder(),
 								name = L["Right-Aligned"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								get = function()
 									return self.db.profile.bar.rightAligned
 								end,
@@ -1054,6 +1080,9 @@ function R:PrepareOptions()
 								type = "toggle",
 								order = newOrder(),
 								name = L["Show Icon"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								get = function()
 									return self.db.profile.bar.showIcon
 								end,
@@ -1067,6 +1096,9 @@ function R:PrepareOptions()
 								type = "toggle",
 								order = newOrder(),
 								name = L["Show Text"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								get = function()
 									return self.db.profile.bar.showText
 								end,
@@ -1081,6 +1113,9 @@ function R:PrepareOptions()
 								type = "range",
 								width = "double",
 								name = L["Width"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								min = 10,
 								max = 1000,
 								step = 1,
@@ -1098,6 +1133,9 @@ function R:PrepareOptions()
 								type = "range",
 								width = "double",
 								name = L["Height"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								min = 1,
 								max = 300,
 								step = 1,
@@ -1115,6 +1153,9 @@ function R:PrepareOptions()
 								type = "range",
 								width = "double",
 								name = L["Scale"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								min = 0.1,
 								max = 5,
 								step = 0.05,
@@ -1133,6 +1174,9 @@ function R:PrepareOptions()
 								dialogControl = "LSM30_Font",
 								width = "double",
 								name = L["Font"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								values = media:HashTable("font"),
 								get = function()
 									return self.db.profile.bar.font
@@ -1148,6 +1192,9 @@ function R:PrepareOptions()
 								type = "range",
 								width = "double",
 								name = L["Font Size"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								min = 1,
 								max = 100,
 								step = 1,
@@ -1166,6 +1213,9 @@ function R:PrepareOptions()
 								dialogControl = "LSM30_Statusbar",
 								width = "double",
 								name = L["Texture"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								values = media:HashTable("statusbar"),
 								get = function()
 									return self.db.profile.bar.texture
@@ -1181,6 +1231,9 @@ function R:PrepareOptions()
 								type = "range",
 								width = "double",
 								name = L["Max Elements"],
+								disabled = function()
+									return not self.db.profile.bar.enabled
+								end,
 								min = 1,
 								max = 25,
 								step = 1,
