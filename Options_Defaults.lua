@@ -105,6 +105,7 @@ function R:PrepareDefaults()
 			sink20OutputSink = "ChatFrame",
 
 			tooltipShowDelay = 0.1,
+			disableAutoTracking = false,
 
 			trackedGroup = "pets",
 			trackedItem = 8494,

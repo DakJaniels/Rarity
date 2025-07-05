@@ -346,6 +346,19 @@ function R:PrepareOptions()
 									Rarity.GUI:UpdateText()
 								end,
 							}, -- progressBar
+							disableAutoTracking = {
+								type = "toggle",
+								order = newOrder(),
+								name = L["Disable auto-tracking"],
+								desc = L["When enabled, the progress bar will not automatically switch to newly attempted items. You must manually select items to track."],
+								get = function()
+									return self.db.profile.disableAutoTracking
+								end,
+								set = function(info, val)
+									self.db.profile.disableAutoTracking = val
+									self:Update("OPTIONS")
+								end,
+							}, -- disableAutoTracking
 							holidayReminder = {
 								type = "toggle",
 								order = newOrder(),
