@@ -735,6 +735,7 @@ L["Progress Bar"] = true
 L["Width"] = true
 L["Height"] = true
 L["Scale"] = true
+L["Show anchor"] = true
 L["Locked"] = true
 L["Other Requirements"] = true
 L["Horde only"] = true
