@@ -17,7 +17,7 @@ local holidayEventToysLegion = {
 		itemId = 151265,
 		npcs = { 122899 },
 		chance = 10,
-		holidayEvents = CONSTANTS.HolidayEvents["Darkmoon Faire"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.DARKMOON_FAIRE,
 		coords = { { m = 407, x = 65.6, y = 67 } },
 		questId = { 47767 },
 	},
@@ -30,7 +30,7 @@ local holidayEventToysLegion = {
 		itemId = 139337,
 		items = { 116762 },
 		chance = 50,
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },
 	},
@@ -43,7 +43,7 @@ local holidayEventToysLegion = {
 		itemId = 151344,
 		items = { 116762 },
 		chance = 100, -- Blind guess
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		requiresHorde = true,
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },
@@ -57,7 +57,7 @@ local holidayEventToysLegion = {
 		itemId = 151343,
 		items = { 116762 },
 		chance = 100, -- Blind guess
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		requiresAlliance = true,
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },
@@ -71,7 +71,7 @@ local holidayEventToysLegion = {
 		itemId = 151348,
 		items = { 116762 },
 		chance = 200, -- Guess
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		requiresHorde = true,
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },
@@ -85,7 +85,7 @@ local holidayEventToysLegion = {
 		itemId = 151349,
 		items = { 116762 },
 		chance = 200, -- Guess
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		requiresAlliance = true,
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },

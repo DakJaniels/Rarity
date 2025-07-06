@@ -21,7 +21,7 @@ local holidayEventPetsDF = {
 		equalOdds = true,
 		creatureId = 203463,
 		lockDungeonId = 285,
-		holidayEvents = CONSTANTS.HolidayEvents["Hallow's End"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.HALLOWS_END,
 		coords = { { m = 435, i = true } },
 		sourceText = L["Can be contained in Loot-Filled Pumpkin, rewarded for defeating the World Event Dungeon during Hallow's End."],
 	},

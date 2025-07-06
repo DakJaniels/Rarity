@@ -2715,7 +2715,7 @@ function R:CreateGroup(options, group, isUser)
 					end,
 					hidden = function()
 						return (item.cat ~= HOLIDAY and item.worldQuestId == nil)
-							or (item.questId == nil and item.lockDungeonId == nil and item.holidayEvents == nil)
+							or (item.questId == nil and item.lockDungeonId == nil and item.holidayTexture == nil)
 					end,
 				},
 				spacer3 = { type = "header", name = L["Defeat Detection"], order = newOrder() },

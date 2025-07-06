@@ -17,7 +17,7 @@ local holidayEventToysShadowlands = {
 		itemId = 187422,
 		items = { 116762 },
 		chance = 50,
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },
 	},
@@ -30,7 +30,7 @@ local holidayEventToysShadowlands = {
 		itemId = 178530,
 		items = { 116762 },
 		chance = 100, -- Blind guess
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },
 	},
@@ -43,7 +43,7 @@ local holidayEventToysShadowlands = {
 		itemId = 191925,
 		items = { 116762 },
 		chance = 100, -- Blind guess
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },
 	},
@@ -56,7 +56,7 @@ local holidayEventToysShadowlands = {
 		itemId = 191937,
 		items = { 116762 },
 		chance = 100, -- Blind guess
-		holidayEvents = CONSTANTS.HolidayEvents["Feast of Winter Veil"],
+		holidayTexture = CONSTANTS.HOLIDAY_TEXTURES.WINTERS_VEIL,
 		questId = { 6983, 7043 },
 		coords = { { m = CONSTANTS.UIMAPIDS.HILLSBRAD_FOOTHILLS, x = 43.6, y = 39.6 } },
 	},

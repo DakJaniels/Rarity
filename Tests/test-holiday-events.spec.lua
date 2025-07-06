@@ -4,16 +4,16 @@ local HolidayEvents = loadfile("Core/HolidayEvents.lua")(_G.RARITY_ADDON_NAME, _
 describe("HolidayEvents", function()
 	describe("IsItemAvailableToday", function()
 		before(function()
-			Rarity.activeHolidayEvents = {}
+			Rarity.holiday_textures = {}
 		end)
 
 		local DARKMOON_FAIRE_ITEM = {
-			holidayEvents = SharedConstants.HolidayEvents["Darkmoon Faire"],
+			holidayTexture = SharedConstants.HOLIDAY_TEXTURES.DARKMOON_FAIRE,
 		}
 		local ITEM_WITHOUT_HOLIDAY_TEXTURE = {}
 
 		it("should return true if the item requires an active holiday event that is currently enabled", function()
-			Rarity.activeHolidayEvents[SharedConstants.HolidayEvents["Darkmoon Faire"][1]] = true
+			Rarity.holiday_textures[SharedConstants.ART_TEXTURES.DMF_ONGOING] = true
 			assertTrue(HolidayEvents.IsItemAvailableToday(DARKMOON_FAIRE_ITEM))
 		end)
 
@@ -24,14 +24,14 @@ describe("HolidayEvents", function()
 		it(
 			"should return false if only holiday events other than the one required by the item are currently active",
 			function()
-				Rarity.activeHolidayEvents[SharedConstants.HolidayEvents["Love is in the Air"][1]] = true
+				Rarity.holiday_textures[SharedConstants.ART_TEXTURES.LOVE_ONGOING] = true
 				assertFalse(HolidayEvents.IsItemAvailableToday(DARKMOON_FAIRE_ITEM))
 			end
 		)
 
 		it("should return true if there are active holiday events other than the one required by the item", function()
-			Rarity.activeHolidayEvents[SharedConstants.HolidayEvents["Love is in the Air"][1]] = true
-			Rarity.activeHolidayEvents[SharedConstants.HolidayEvents["Darkmoon Faire"][1]] = true
+			Rarity.holiday_textures[SharedConstants.ART_TEXTURES.LOVE_ONGOING] = true
+			Rarity.holiday_textures[SharedConstants.ART_TEXTURES.DMF_ONGOING] = true
 			assertTrue(HolidayEvents.IsItemAvailableToday(DARKMOON_FAIRE_ITEM))
 		end)
 
