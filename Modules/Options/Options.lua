@@ -1025,34 +1025,19 @@ function R:PrepareOptions()
 									Rarity.GUI:UpdateText()
 								end,
 							},
-							anchor = {
+							movable = {
 								type = "toggle",
 								order = newOrder(),
-								name = L["Show anchor"],
+								name = L["Movable"],
+								desc = L["When enabled, the progress bar can be moved by dragging the anchor handle."],
 								disabled = function()
 									return not self.db.profile.bar.enabled
 								end,
 								get = function()
-									return self.db.profile.bar.anchor
+									return self.db.profile.bar.movable
 								end,
 								set = function(info, val)
-									self.db.profile.bar.anchor = val
-									Rarity.GUI:UpdateBar()
-									Rarity.GUI:UpdateText()
-								end,
-							},
-							locked = {
-								type = "toggle",
-								order = newOrder(),
-								name = L["Locked"],
-								disabled = function()
-									return not self.db.profile.bar.enabled
-								end,
-								get = function()
-									return self.db.profile.bar.locked
-								end,
-								set = function(info, val)
-									self.db.profile.bar.locked = val
+									self.db.profile.bar.movable = val
 									Rarity.GUI:UpdateBar()
 									Rarity.GUI:UpdateText()
 								end,

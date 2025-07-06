@@ -84,6 +84,8 @@ L["Untrack all mounts"] = true
 L["Disable auto-tracking"] = true
 L["When enabled, the progress bar will not automatically switch to newly attempted items. You must manually select items to track."] =
 	true
+L["Movable"] = true
+L["When enabled, the progress bar can be moved by dragging the anchor handle."] = true
 L["Echo of the Cave"] = true
 L["Echo of the Inferno"] = true
 L["Echo of the Depths"] = true
