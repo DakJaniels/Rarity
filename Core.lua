@@ -176,19 +176,6 @@ do
 		self:PrepareDefaults() -- Loads in any new items
 
 		self.db = LibStub("AceDB-3.0"):New("RarityDB", self.defaults, true)
-
-		-- Migrate old bar settings to new movable setting
-		if self.db.profile.bar.anchor ~= nil or self.db.profile.bar.locked ~= nil then
-			-- Convert old anchor/locked settings to new movable setting
-			if self.db.profile.bar.anchor == true and self.db.profile.bar.locked == false then
-				self.db.profile.bar.movable = true
-			else
-				self.db.profile.bar.movable = false
-			end
-			-- Clean up old settings
-			self.db.profile.bar.anchor = nil
-			self.db.profile.bar.locked = nil
-		end
 		Output:Setup()
 
 		self:RegisterChatCommand("rarity", "OnChatCommand")
